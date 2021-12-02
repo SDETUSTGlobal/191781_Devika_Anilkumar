@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>welcome</title>
+    <style>
+    .c{
+      margin: auto;
+  width: 25%;
+
+  padding: 10px;
+    }
+       table {
+  position: relative;
+  top:-20px;
+  background-color:#A9A9A9;
+
+}
+td,th{
+border: 1px solid black;
+}
+body{
+	background-image:url("https://media.istockphoto.com/photos/gray-abstract-minimal-motion-backgrounds-loopable-elements-4k-picture-id1174989482?b=1&k=20&m=1174989482&s=170667a&w=0&h=ld7ukW9KTzUlJLc6c37C2xs5ESYP2wLyjxsEVCumn2s=");
+	background-size: cover;
+
+	}
+    </style>
+</head>
+<body>
+<div class="c">
+<h1> Welcome  {{na}}</h1>
+<h3>Your Details</h3>
+<p>UID :{{uid}}</p>
+<p>Company Name:{{cna}}</p>
+<p>Email:{{em}}</p>
+    </div>
+<h1 align="center">Details of all users</h1>
+
+<table align="center">
+    <tbody>
+    <th>Name</th><th>UID</th><th>Company Name</th><th>Email</th>
+{% for item in details %}
+<tr>
+    <td>{{item[0]}}</td>
+    <td>{{item[1]}}</td>
+    <td>{{item[2]}}</td>
+    <td>{{item[3]}}</td>
+
+
+</tr>
+{% endfor %}
+    </tbody>
+</table>
+</body>
+</html>
