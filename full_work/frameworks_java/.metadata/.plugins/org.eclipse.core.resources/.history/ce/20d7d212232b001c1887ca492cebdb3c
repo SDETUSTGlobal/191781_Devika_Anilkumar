@@ -1,0 +1,10 @@
+Feature: Login Function							
+To enter in the system user must be able to access software when login is successful								
+Scenario:						
+Given	 user on login page						
+When	 user enters valid data on page
+| Fields                 | Values              |
+| Username               | Tester              |
+| Password               | test                |
+						
+Then	 user should see Web Orders							

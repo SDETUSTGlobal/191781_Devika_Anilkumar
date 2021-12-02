@@ -1,0 +1,44 @@
+package viewallorder;
+
+import org.openqa.selenium.By;   
+import org.openqa.selenium.WebDriver;   
+import org.openqa.selenium.chrome.ChromeDriver;  
+import cucumber.annotation.en.Given;   
+import cucumber.annotation.en.Then;   
+import cucumber.annotation.en.When;  
+
+ 
+public class Step3 {   
+	 
+	    WebDriver driver=null;
+	  
+   @Given("^Orderd product details$")   
+   public void User_is_on_product_page() { 
+	  
+	   WebDriver driver = new ChromeDriver();
+	   driver.get("http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders/default.aspx");  
+   }   
+      
+   @When("^user clicks on view all orders$")   
+   public void clicks_on_view_all_orders(){   
+      
+      
+	   
+          
+      driver.findElement(By.linkText("View all orders")).click(); 
+      
+      
+   }   
+      
+   @Then("^user should see list of all products$")   
+   public void user_should_see_list_of_all_products() {
+if(driver.getCurrentUrl().equalsIgnoreCase("http://secure.smartbearsoftware.com/samples/testcomplete11/WebOrders/login.aspx")) 
+{
+         System.out.println("Test Pass");   
+      } 
+   else {   
+         System.out.println("Test Failed");   
+      }   
+      driver.close();   
+   }   
+}

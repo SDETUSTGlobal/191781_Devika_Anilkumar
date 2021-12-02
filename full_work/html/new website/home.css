@@ -1,0 +1,21 @@
+
+body{
+    min-height:100vh;
+    width:100%;
+    background-image:url("photo3.jpg");
+    background-position: center;
+    background-size: cover;
+}
+h1{
+    color:purple;
+    font-family: sans-serif;
+    font-style: oblique;
+    
+}
+p{
+    color: rebeccapurple;
+    font-family: inherit;
+    font-style: unset;
+    font-size:20px;
+    text-align: justify;
+}

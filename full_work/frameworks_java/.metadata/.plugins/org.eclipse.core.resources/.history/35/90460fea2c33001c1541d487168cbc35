@@ -1,0 +1,14 @@
+package com.app.Mockito;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class MockitoMockAnnotationExample {
+
+	@Test
+	public void test() {
+		fail("Not yet implemented");
+	}
+
+}

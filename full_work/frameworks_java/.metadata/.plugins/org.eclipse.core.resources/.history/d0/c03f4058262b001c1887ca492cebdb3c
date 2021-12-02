@@ -1,0 +1,6 @@
+Feature: Login 					
+
+Scenario:	 Successful Login 				
+Given	 user on login page						
+When	 user enters valid data on page
+Then	 user should see Web Orders.					

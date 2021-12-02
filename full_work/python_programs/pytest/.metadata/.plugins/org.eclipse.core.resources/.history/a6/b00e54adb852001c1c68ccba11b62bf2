@@ -1,0 +1,32 @@
+package javanew;
+
+public class Calculator   {
+int c;
+public int add(int n,int m)
+{
+c=n+m;
+return c; }
+public int mul(int n, int m) {
+c=n*m;
+return c;}
+public int sub ( int n, int m)  {
+c= n - m;
+return c;}
+public float div( int n, int m)  {
+c=n/m;
+}
+}
+
+Public class CalculatorMain {
+public static void main(String args[])  {
+Calculator c = new Calculator();
+c.add(5,10);
+System.out.println("Sum =" + c);
+c.mul(5,10);
+System.out.println("product =" + c);
+c.sub(5,10);
+System.out.println("diff =" + c);
+c.div(5,10);
+System.out.println("Division =" + c);
+
+}}

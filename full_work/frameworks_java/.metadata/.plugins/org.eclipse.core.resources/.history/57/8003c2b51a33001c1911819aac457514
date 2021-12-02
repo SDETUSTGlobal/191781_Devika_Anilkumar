@@ -1,0 +1,9 @@
+package mockito;
+
+import org.testng.annotations.Test;
+
+public class ToDoBusinessMock {
+  @Test
+  public void f() {
+  }
+}

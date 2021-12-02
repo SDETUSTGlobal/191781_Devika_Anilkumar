@@ -1,0 +1,22 @@
+Feature: view all orders function				
+To view all ordered products details					
+Scenario: Display all ordered 		products details		
+Given: Orderd product details				
+When: user clicks on view all orders				
+Then:	It should display all ordered products details				
+Scenario:	check  all orders				
+Given:	Orderd product details				
+When:	user clicks on check all				
+Then:	It should select all  ordered products 				
+Scenario:	uncheck  all orders				
+Given:	Orderd product details				
+When:	user clicks on uncheck all				
+Then:	It should remove all selected  ordered products 				
+Scenario:	Delete   orders				
+Given: Orderd product details				
+When: user clicks on delete button				
+Then:	It should delete selected  ordered products 				
+Scenario:	Edit orders				
+Given: Orderd product details				
+When: user clicks on edit button				
+Then:	should navigate to edit order page				

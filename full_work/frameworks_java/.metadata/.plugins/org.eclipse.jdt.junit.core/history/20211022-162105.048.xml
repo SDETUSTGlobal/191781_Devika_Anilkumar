@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="ToDoBusinessMock (1)" project="mockitonew" tests="1" started="1" failures="0" errors="1" ignored="0">
+  <testsuite name="com.app.Mockito.ToDoBusinessMock" time="0.094">
+    <testcase name="testusing_Mocks" classname="com.app.Mockito.ToDoBusinessMock" time="0.094">
+      <error>java.lang.ExceptionInInitializerError&#13;
+	at org.mockito.cglib.core.KeyFactory$Generator.generateClass(KeyFactory.java:167)&#13;
+	at org.mockito.cglib.core.DefaultGeneratorStrategy.generate(DefaultGeneratorStrategy.java:25)&#13;
+	at org.mockito.cglib.core.AbstractClassGenerator.create(AbstractClassGenerator.java:217)&#13;
+	at org.mockito.cglib.core.KeyFactory$Generator.create(KeyFactory.java:145)&#13;
+	at org.mockito.cglib.core.KeyFactory.create(KeyFactory.java:117)&#13;
+	at org.mockito.cglib.core.KeyFactory.create(KeyFactory.java:109)&#13;
+	at org.mockito.cglib.core.KeyFactory.create(KeyFactory.java:105)&#13;
+	at org.mockito.cglib.proxy.Enhancer.&lt;clinit&gt;(Enhancer.java:70)&#13;
+	at org.mockito.internal.creation.cglib.ClassImposterizer.createProxyClass(ClassImposterizer.java:95)&#13;
+	at org.mockito.internal.creation.cglib.ClassImposterizer.imposterise(ClassImposterizer.java:57)&#13;
+	at org.mockito.internal.creation.cglib.ClassImposterizer.imposterise(ClassImposterizer.java:49)&#13;
+	at org.mockito.internal.creation.cglib.CglibMockMaker.createMock(CglibMockMaker.java:24)&#13;
+	at org.mockito.internal.util.MockUtil.createMock(MockUtil.java:33)&#13;
+	at org.mockito.internal.MockitoCore.mock(MockitoCore.java:59)&#13;
+	at org.mockito.Mockito.mock(Mockito.java:1285)&#13;
+	at org.mockito.Mockito.mock(Mockito.java:1163)&#13;
+	at com.app.Mockito.ToDoBusinessMock.testusing_Mocks(ToDoBusinessMock.java:12)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)&#13;
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)&#13;
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)&#13;
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)&#13;
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)&#13;
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)&#13;
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)&#13;
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)&#13;
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)&#13;
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)&#13;
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)&#13;
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)&#13;
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:93)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:40)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:529)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:756)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:452)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)&#13;
+Caused by: java.lang.reflect.InaccessibleObjectException: Unable to make protected final java.lang.Class java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain) throws java.lang.ClassFormatError accessible: module java.base does not "opens java.lang" to unnamed module @45c8e616&#13;
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:357)&#13;
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:297)&#13;
+	at java.base/java.lang.reflect.Method.checkCanSetAccessible(Method.java:199)&#13;
+	at java.base/java.lang.reflect.Method.setAccessible(Method.java:193)&#13;
+	at org.mockito.cglib.core.ReflectUtils$2.run(ReflectUtils.java:57)&#13;
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:312)&#13;
+	at org.mockito.cglib.core.ReflectUtils.&lt;clinit&gt;(ReflectUtils.java:47)&#13;
+	... 40 more&#13;
+&#13;
+</error>
+    </testcase>
+  </testsuite>
+</testrun>

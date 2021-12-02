@@ -1,0 +1,45 @@
+package dataTable;   
+import java.util.List;  
+import org.openqa.selenium.By;   
+import org.openqa.selenium.WebDriver;   
+import org.openqa.selenium.WebElement;    
+import org.openqa.selenium.support.ui.Select;  
+import cucumber.annotation.en.Given;   
+import cucumber.annotation.en.Then;   
+import cucumber.annotation.en.When;   
+import cucumber.table.DataTable;  
+public class StepDefinition {   
+   WebDriver driver = null;  
+   @Given("^user has its Email$")   
+   public void goToFacebook() {   
+       
+      driver.navigate().to("https://www.facebook.com/");   
+   }   
+      
+   @When("^I enter valid data on the page$")   
+   public void enterData(DataTable table){   
+      //Initialize data table   
+	   List<List<String>> data = table.raw(); 
+      System.out.println(data.get(1).get(1));   
+        
+      //Enter data  
+      driver.findElement(By.id("ctl00_MainContent_username")).sendKeys(data.get(1).get(1));  
+      driver.findElement(By.name("ctl00$MainContent$password")).sendKeys(data.get(2).get(1));
+      driver.findElement(By.className("button")).click();
+          
+       
+      // Click submit button driver.findElement(By.name("websubmit")).click();   
+   }   
+      
+   @Then("^ It should be logged in$")   
+   public void User_registration_should_be_successful() {
+if(driver.getCurrentUrl().equalsIgnoreCase("https://www.facebook.com/")) 
+{
+         System.out.println("Test Pass");   
+      } 
+   else {   
+         System.out.println("Test Failed");   
+      }   
+      driver.close();   
+   }   
+}

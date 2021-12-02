@@ -1,0 +1,24 @@
+Feature: Data table
+Verify that the new user registration is successful after passing correct inputs.
+Scenario:
+Given the user on the user registration page.
+When user enter invalid data on the page
+| Fields                 | Values              |
+| First Name             | Sumita              |
+| Last Name              | Pandey              |
+| Email Address          | someone@gmail.com   |
+| Re-enter Email Address | someone@gmail.com   |
+| Password               |PASSWORD             |
+| Birthdate              | 02                  |
+Then the user registration should be successful.
+
+feature:	Login Function							
+To enter in the system user must be able to access software when login is successful								
+Scenario:							
+Given	the user has its Email							
+And 	password							
+when	user enters the correct email and password							
+Then	It should be logged in							
+Scenario:	login unsuccessful							
+When	user enters either wrong email or password							
+Then	it should be display an error message and go back to the login page							

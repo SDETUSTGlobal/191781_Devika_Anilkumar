@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="RunTest" project="Webtestdrive" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="dataTable.RunTest" time="0.0">
+    <testsuite name="Feature: Data table" time="0.0">
+      <testcase name="Scenario:" classname="Scenario:" time="0.0"/>
+    </testsuite>
+  </testsuite>
+</testrun>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="Run" project="Newcucumber" tests="3" started="3" failures="0" errors="0" ignored="3">
+  <testsuite name="login.Run" time="0.001">
+    <testsuite name="Feature: login" time="0.001">
+      <testsuite name="Scenario: Successful Login" time="0.001">
+        <testcase name="Given User is on Home Page" classname="Given User is on Home Page" time="0.001" ignored="true"/>
+        <testcase name="When User enters Credentials to Login" classname="When User enters Credentials to Login" time="0.0" ignored="true"/>
+        <testcase name="Then user should see Web Orders" classname="Then user should see Web Orders" time="0.0" ignored="true"/>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testrun>

@@ -1,0 +1,11 @@
+Feature:	Login Function							
+To enter in the system user must be able to access software when login is successful								
+Scenario:						
+Given	 user has its Email							
+And 	 password							
+When	 user enters the correct email and password	
+| Fields                 | Values              |
+| Username               | Tester              |
+| Password               | test                |
+						
+Then	 It should be logged in							
