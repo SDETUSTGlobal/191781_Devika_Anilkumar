@@ -1,9 +1,0 @@
-package testCases;
-
-import org.testng.annotations.Test;
-
-public class HybridExecuteTest {
-  @Test
-  public void f() {
-  }
-}

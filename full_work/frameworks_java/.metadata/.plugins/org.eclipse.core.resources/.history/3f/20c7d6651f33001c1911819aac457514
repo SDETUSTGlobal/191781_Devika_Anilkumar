@@ -1,5 +1,0 @@
-package org.mockito;
-
-public interface Mockito {
-
-}

@@ -1,9 +1,0 @@
-package com.app.Mockito;
-
-import org.testng.annotations.Test;
-
-public class  MockitoMockMethodExample {
-  @Test
-  public void f() {
-  }
-}
