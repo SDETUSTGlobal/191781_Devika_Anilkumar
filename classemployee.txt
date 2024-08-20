@@ -1,0 +1,85 @@
+Employee
+--------------------------------------------------
+package com.Inheritance;
+
+public class Employee {
+private int eid;
+private String name;
+Employee(){
+System.out.println("Default Constructor");
+}
+
+public Employee(int eid, String name) {
+System.out.println("Derived Constructor");
+this.eid = eid;
+this.name = name;
+}
+
+public int getEid() {
+return eid;
+}
+
+public void setEid(int eid) {
+this.eid = eid;
+}
+
+public String getName() {
+return name;
+}
+
+public void setName(String name) {
+this.name = name;
+}
+public void displaye() {
+System.out.println("Employee id "+eid+"\nName "+name);
+}
+
+}
+
+class PermanentEmplyee extends Employee{
+private float salary;
+private String addr;
+public PermanentEmplyee(float salary, String addr) {
+super(); //calling base class default constructor
+this.salary = salary;
+this.addr = addr;
+}
+public PermanentEmplyee(int eid,String ename,float salary, String addr) {
+super(eid,ename); //calling base class overridded constructor
+this.salary = salary;
+this.addr = addr;
+}
+public float getSalary() {
+return salary;
+}
+public void setSalary(float salary) {
+this.salary = salary;
+}
+public String getAddr() {
+return addr;
+}
+public void setAddr(String addr) {
+this.addr = addr;
+}
+public void displayP() {
+displaye();
+System.out.println("Employee salary : "+salary+"\nAddress : "+addr);
+}
+}
+
+MainProgram
+--------------------------------------------------
+package com.Inheritance;
+
+public class MainProgram {
+
+public static void main(String[] args) {
+PermanentEmplyee pobj = new PermanentEmplyee(245,"Addr1");
+pobj.displayP();
+System.out.println("second object\n");
+PermanentEmplyee pobj1 = new PermanentEmplyee(111,"name111",245,"Addr1");
+pobj1.displayP();
+}
+
+}
+
