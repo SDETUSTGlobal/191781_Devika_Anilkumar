@@ -1,0 +1,107 @@
+class Department {
+    private int id;
+    private String deptname;
+    private String hod_name;
+    
+    // Constructor
+    public Department(int id, String deptname, String hod_name) {
+        this.id = id;
+        this.deptname = deptname;
+        this.hod_name = hod_name;
+    }
+
+    // Getter and Setter methods
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getDeptname() {
+        return deptname;
+    }
+
+    public void setDeptname(String deptname) {
+        this.deptname = deptname;
+    }
+
+    public String getHod_name() {
+        return hod_name;
+    }
+
+    public void setHod_name(String hod_name) {
+        this.hod_name = hod_name;
+    }
+    
+    @Override
+    public String toString() {
+        return "Department ID: " + id + ", Name: " + deptname + ", HOD: " + hod_name;
+    }
+}
+
+class University {
+    private String name;
+    private String address;
+    private Department[] depts;
+    
+    // Constructor
+    public University(String name, String address, Department[] depts) {
+        this.name = name;
+        this.address = address;
+        this.depts = depts;
+    }
+
+    // Getter and Setter methods
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public Department[] getDepts() {
+        return depts;
+    }
+
+    public void setDepts(Department[] depts) {
+        this.depts = depts;
+    }
+    
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("University Name: ").append(name)
+          .append(", Address: ").append(address)
+          .append("\nDepartments:\n");
+        for (Department dept : depts) {
+            sb.append(dept).append("\n");
+        }
+        return sb.toString();
+    }
+}
+
+public class CompositionEg {
+    public static void main(String[] args) {
+        // Create at least two departments
+        Department dept1 = new Department(1, "Computer Science", "Dr. Smith");
+        Department dept2 = new Department(2, "Mathematics", "Dr. Johnson");
+        
+        // Set those 2 departments to University object
+        Department[] departments = {dept1, dept2};
+        University university = new University("Tech University", "123 Tech Road", departments);
+        
+        // Display university object
+        System.out.println(university);
+    }
+}
