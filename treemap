@@ -1,0 +1,36 @@
+package com.coll;
+
+import java.util.*;
+import java.util.Map.Entry;
+
+public class TreeMapEg {
+
+    public static void main(String[] args) {
+        // Create a TreeMap with the custom comparator for descending order
+        Map<String, String> tm = new TreeMap<>(new DescendingOrderComparator());
+
+        // Add entries to the TreeMap
+        tm.put("Karnataka", "Bangalore");
+        tm.put("Tamil Nadu", "Chennai");
+        tm.put("Kerala", "Trivandrum");
+
+        // Get the entry set of the TreeMap
+        Set<Entry<String, String>> entrySet = tm.entrySet();
+        // Iterate through the entry set
+        Iterator<Entry<String, String>> iterator = entrySet.iterator();
+
+        while (iterator.hasNext()) {
+            Entry<String, String> entry = iterator.next();
+            System.out.println(entry.getKey() + " -> " + entry.getValue());
+        }
+    }
+
+    // Nested static class for descending order comparator
+    private static class DescendingOrderComparator implements Comparator<String> {
+        @Override
+        public int compare(String o1, String o2) {
+            // Compare in reverse order for descending sort
+            return o2.compareTo(o1);
+        }
+    }
+}
