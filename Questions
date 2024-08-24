@@ -1,0 +1,11 @@
+#1. In given City ArrayList, make changes, to iterate using
+a) enhanced for loop
+b) normal for loop, without iterator
+
+#2. Make changes in above example, to take all input data from Keyboard
+
+#3. Modify above program by using loop to input details of multiple cities 
+
+#4. In above ArrayList, make changes to perform below
+a) add City objects in between
+b) remove City object
