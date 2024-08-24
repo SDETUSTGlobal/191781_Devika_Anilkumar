@@ -1,0 +1,22 @@
+package com.coll;
+
+import java.util.*;
+import java.util.Map.Entry;
+
+public class HashMapEg {
+    public static void main(String[] args) {
+        Map<String, String> hmss = new HashMap<>();
+
+        hmss.put("Karnataka", "Bangalore");
+        hmss.put("Tamil Nadu", "Chennai");
+        hmss.put("Kerala", "Trivandrum");
+
+        Set<Entry<String, String>> sess = hmss.entrySet();
+        Iterator<Entry<String, String>> iess = sess.iterator();
+
+        while(iess.hasNext()) {
+            Entry<String, String> ess = iess.next();
+            System.out.println(ess.getKey() + " -> " + ess.getValue());
+        }
+    }
+}
