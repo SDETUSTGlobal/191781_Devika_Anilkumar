@@ -1,0 +1,199 @@
+enum
+
+enum Day {
+		MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY
+	};
+	
+public class EnumDemo {
+
+	Day day = Day.MONDAY;
+	
+	public static void main(String[] a) {
+
+		Day today = Day.WEDNESDAY;
+		printWeekend(today);
+	}
+
+	// an enum type can be used as local variable, parameter
+	static public void printWeekend(Day today) {
+		if (today == Day.SATURDAY) {
+			System.out.println("It's Weekend, Saturday");
+		} else if (today == Day.SUNDAY) {
+			System.out.println("It's Weekend, Sunday");
+		} else {
+			System.out.println("It's not Weekend");
+		}
+	}
+
+	//an enum type can be used as return type
+	Day getSunday() {
+		return Day.SUNDAY;
+	}
+}
+
+--------------------------------------------------------------------------------------------------
+chat
+import java.util.ArrayList;
+
+public class ChatMessages {
+public static void main(String[] args) {
+	ArrayList<String> cmsgs = new ArrayList<>();
+	cmsgs.add("P13 - D");
+	cmsgs.add("P2 - S");
+	cmsgs.add("P9 - d");
+	cmsgs.add("P8 - N");
+	cmsgs.add("P13 - e");
+	cmsgs.add("P5 - Y");
+	cmsgs.add("P8 - I");
+	cmsgs.add("P9 - completed");
+	
+	/* 
+	 * List all chat messages
+	 * TBD - How many times a participant responded */
+	
+	/*
+	 * Iterator
+	 * forEach
+	 * enahnced for
+	 */
+	int done = 0, notdone = 0, error = 0, others = 0;
+	for(String msg: cmsgs){
+		if(msg.indexOf("D")>0 || msg.indexOf("d")>0 || msg.indexOf("completed")>0){
+			done++;
+		}
+		else if(msg.indexOf("E")>0 || msg.indexOf("e")>0){
+			error++;
+		}
+		else if(msg.indexOf("N")>0){
+			notdone++;
+		}
+		else{
+			others++;
+		}
+		System.out.println(msg);
+	}
+	
+	System.out.println("No. of Done is "+done);
+	System.out.println("No. of Not Done is "+notdone);
+	System.out.println("No. of Errors is "+error);
+	System.out.println("No. of Others is "+others);
+}
+}
+--------------------------------------------------------------------------------------------------------
+chat app
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.TreeSet;
+
+// 1. Develop an application using LinkedList,
+//and store Chat Messages(as objects), 
+//display, reverse and again display reversed LinkedList
+class Chats {
+	private String sender_name;
+	private String msg;
+
+	public Chats(String sender_name, String msg) {
+		super();
+		this.sender_name = sender_name;
+		this.msg = msg;
+	}
+
+	public String getSender_name() {
+		return sender_name;
+	}
+
+	public void setSender_name(String sender_name) {
+		this.sender_name = sender_name;
+	}
+
+	public String getMsg() {
+		return msg;
+	}
+
+	public void setMsg(String msg) {
+		this.msg = msg;
+	}
+
+	@Override
+	public String toString() {
+		return "Chats [sender_name=" + sender_name + ", msg=" + msg + "]";
+	}
+}
+
+public class Abcd {
+	public static void main(String[] args) {
+		
+		/*class TSComparator implements Comparator<Chats> {
+
+			@Override
+			public int compare(Chats o1, Chats o2) {
+				String name1 = o1.getSender_name();
+				String name2 = o2.getSender_name();
+				return name1.compareTo(name2);
+			}
+
+		}
+		
+		//Anonymous Inner class
+		Comparator<Chats> mcmp = new Comparator<Chats>(){
+			@Override
+			public int compare
+			
+			(o1, o2)-> o1.getSender_name().compareTo(o2.getSender_name());
+			
+			
+		};*/
+		
+		TreeSet<Chats> cmsgs = new TreeSet<>(
+				(o1, o2)-> (o1.getSender_name()+o1.getMsg()).compareTo(o2.getSender_name()+o2.getMsg())
+				);
+		cmsgs.add(new Chats("name1", "msg1"));
+		cmsgs.add(new Chats("name2", "msg2"));
+		cmsgs.add(new Chats("name1", "msg3"));
+		cmsgs.add(new Chats("name4", "msg4"));
+
+		display(cmsgs);
+		
+		/* write lambda which sorts based on msg order(ascending)*/
+		Chats c = Collections.min(cmsgs, (c1,c2)->c1.getMsg().compareTo(c2.getMsg()));
+
+		System.out.println("-------------Filtered messages below------------");
+		cmsgs.stream().filter((e)->e.getSender_name().equalsIgnoreCase("name1"))
+		.forEach((item)->{System.out.println(item);});
+		System.out.println("------------------------------------------------");
+		System.out.println(c);
+	}
+
+	static void display(TreeSet<Chats> cmsgs) {
+		for (Chats cmg : cmsgs) {
+			System.out.println(cmg + "\t");
+		}
+	}
+}
+
+-------------------------------------------------------------------------------------------------------
+hash map
+import java.util.HashMap;
+import java.util.Set;
+
+public class ChatMessagesHM {
+    public static void main(String[] args) {
+        HashMap<String, String> hmss = new HashMap<>();
+
+        hmss.put("name1", "msg899");
+        hmss.put("name2", "msg199");
+        hmss.put("name3", "msg499");
+        hmss.put("name4", "msg299");
+        hmss.put("name5", "msg699");
+        hmss.put("name6", "msg599");
+
+        Set<String> ss = hmss.keySet();
+
+        for (String item_key : ss) {
+            System.out.println(item_key + " --> " + hmss.get(item_key));
+        }
+    }
+}
